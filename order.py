@@ -24,10 +24,10 @@ app.secret_key = 'your_secret_key'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# import mysql.connector as myconn
-# mydb=myconn.connect(host="localhost",user="root",password="gaju1234?")                    #  CREATE DATABASE WHITH DATA NAME     
-# dbcursor=mydb.cursor()
-# dbcursor.execute("create database data")
+import mysql.connector as myconn
+mydb=myconn.connect(host="localhost",user="root",password="gaju1234?")                    #  CREATE DATABASE WHITH DATA NAME     once create thin commited this code
+dbcursor=mydb.cursor()
+dbcursor.execute("create database data")
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #  # Setting up SQL database URI
