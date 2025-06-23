@@ -1,0 +1,370 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deshmukh Photography, Gajanan Photography">
+    <meta name="keywords" content="Deshmukh Photography, Gajanan Photography">
+ 
+    <title> Deshmukh Photography | Gajanan Photography</title>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <style>
+
+        .blog-post-card {
+            border-radius: 15px;
+        }
+
+        .blog-post-card img {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+        .carousel-indicators li{
+            width: calc(0.03rem + 1.0vw);
+        }
+
+    .carousel-item {
+      transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Smooth transition */
+      height: 400px; /* Set a fixed height for consistency */
+    }
+
+    .carousel-inner img {
+      object-fit: cover; /* Ensure the image covers the entire space */
+      width: 100%;
+      height: 100%; /* Ensure no white space */
+    }
+
+ /* Navbar Styling */
+ 
+    .img-hover-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .navbar {
+animation: slideDown 1.0s ease-out;
+}
+
+.navbar-nav .nav-link {
+position: relative;
+font-size: 18px;
+}
+
+.navbar-nav .nav-link::after {
+content: "";
+position: absolute;
+background: #295a8d;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+width: 100%;
+}
+
+@keyframes fadeInUp {
+from {
+  transform: translateY(17px);
+  opacity: 0;
+}
+to{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+  .img-hover {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .img-hover:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.9; /* Slightly dim the image */
+  }
+  #chatButton {
+          position: fixed;
+          bottom: 50px;
+          right: 15px;
+          border: none;
+          border-radius: 40%;
+          cursor: pointer;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          background-color: green;
+      }  
+  </style>
+
+</head>
+<body>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top d-flex justify-content-between align-items-center px-3">
+     <div class="container">
+        <h5 class="text-white mb-0">Deshmukh Photography</h5>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>       
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto "> <!-- Changed ml-auto to ms-auto for Bootstrap 5 -->
+                <li class="nav-item ">
+                    <a class="nav-link text-black" href="/">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-black " href="/garelly">Gallery</a>
+                </li>
+                <li class="nav-item ">
+                <a href="/contact"><button class="btn btn-danger" type="button" style="background-color: red; border-color: red; transition: 0.3s;">Studio</button></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+            </ol>
+        
+            <!-- Carousel Items -->
+                    <!-- Carousel Items -->
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="https://www.vsnapu.com/Files/Blogs/Posts/a7b82ae7-14c8-4052-ad1d-82ee8ede3730_PostImage.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+            <img src="https://www.vsnapu.com/Files/Blogs/Posts/30573016-7bb9-4f7d-9219-5b863502a794_PostImage.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+            <img src="https://www.vsnapu.com/Files/Blogs/Posts/4e835781-0f32-4f1f-8d6f-5d50ff4e1314_PostImage.png" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+            <img src="https://www.vsnapu.com/Files/Blogs/Posts/14628c53-0804-4402-b4cc-aa2df699993c_PostImage.jpg" alt="Image 4">
+            </div>
+            </div>
+             <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <a href="https://wa.me/9359458009" target="_blank" id="chatButton">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 60px; height: 60px;" alt="Chat">
+    </a>
+ <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+        <div class="container" style="min-width:95%">
+          
+            <div class="row pt-5">
+                <!-- Blog Posts -->
+                <div class="col-md-100 ">
+                    <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card blog-post-card">
+                                    <a href="/blogs/blog1" style="text-decoration:none;">
+                                    <div class="img-hover-wrapper">
+                                        <img src="https://www.vsnapu.com/Files/Blogs/Posts/47acf46e-58a1-462d-8aa3-00581fd21378_PostImage.jpg" class="card-img-top img-hover" alt="Blog Image">
+                                    </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title text-primary">Engagement Photoshoot Ideas: Capturing Your Love Story</h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">Author:  • Date: January 15, 2025</small><br>
+                                                <small class="text-muted">Category: Wedding</small><br>
+                                                <small class="text-muted">Subcategory: Engagement</small>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card blog-post-card">
+                                  <a href="/blogs/blog2" style="text-decoration:none;">
+                                    <div class="img-hover-wrapper">
+                                      <img src="https://www.vsnapu.com/Files/Blogs/Posts/14628c53-0804-4402-b4cc-aa2df699993c_PostImage.jpg" class="card-img-top img-hover" alt="Blog Image">
+                                    </div>
+                                    <div class="card-body">
+                                      <h5 class="card-title text-primary">Creative Baby Photoshoot Ideas: Tiny Toes and Big Smiles</h5>
+                                      <p class="card-text">
+                                        <small class="text-muted">Author: • Date: January 16, 2025</small><br>
+                                        <small class="text-muted">Category: Babyshoot</small><br>
+                                        <small class="text-muted">Subcategory: Babyshoot Tips &amp; Ideas</small>
+                                      </p>
+                                    </div>
+                                  </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card blog-post-card">
+                                    <a href="/blogs/blog3" style="text-decoration:none;">
+                                    <div class="img-hover-wrapper">
+                                        <img src="https://www.vsnapu.com/Files/Blogs/Posts/bcdb1739-6525-47ac-b2de-d582c2858623_PostImage.jpg" class="card-img-top img-hover" alt="Blog Image">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title text-primary">Best Pre-Wedding Shoot Place In Manali To Capture Your Love</h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">Author:  • Date: January 15, 2025</small><br>
+                                                <small class="text-muted">Category: Wedding</small><br>
+                                                <small class="text-muted">Subcategory: Pre Wedding Location</small>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card blog-post-card">
+                                    <a href="/blogs/blog4" style="text-decoration:none;">
+                                    <div class="img-hover-wrapper">
+                                        <img src="https://www.vsnapu.com/Files/Blogs/Posts/dd686363-273c-4146-84af-79aca716c7c4_PostImage.jpg" class="card-img-top img-hover" alt="Blog Image">
+                                    </div>
+                                    <div class="card-body">
+                                            <h5 class="card-title text-primary">Embrecity the Night: 11 /magic Ideas For Your Pre-Wedding Photoshoot</h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">Author:  • Date: January 08, 2025</small><br>
+                                                <small class="text-muted">Category: Wedding</small><br>
+                                                <small class="text-muted">Subcategory: Pre-Wedding Tips & idess</small>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card blog-post-card">
+                                    <a href="/blogs/blog5" style="text-decoration:none;" data-bs-target="#exampleModal">
+                                    <div class="img-hover-wrapper">
+                                        <img src="https://www.vsnapu.com/Files/Blogs/Posts/46ac1030-9085-4a10-b4df-a31b85b7e3f9_PostImage.jpg" class="card-img-top img-hover" alt="Blog Image">
+                                    </div>
+                                    <div class="card-body">
+                                            <h5 class="card-title text-primary">Goa Beach Photoshoot ideas : Sun Sand, And Romance</h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">Author:  • Date: January 15, 2025</small><br>
+                                                <small class="text-muted">Category: Photo  & Vidio Ideas</small><br>
+                                                <small class="text-muted">Subcategory: Photo &amp; Ideas</small>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card blog-post-card">
+                                    <a href="/blogs/blog6" style="text-decoration:none;">
+                                    <div class="img-hover-wrapper">
+                                        <img src="https://www.vsnapu.com/Files/Blogs/Posts/4ac230f5-9774-4d76-8eb9-86f9893ba6fb_PostImage.jpg" class="card-img-top img-hover" alt="Blog Image">    
+                                    </div>
+                                    <div class="card-body">
+                                            <h5 class="card-title text-primary"> Crative Rain Photograpy Ideas: Dancing In The Rain</h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">Author:  • Date: January 16, 2025</small><br>
+                                                <small class="text-muted">Category: Photo & Vidio Ideas</small><br>
+                                                <small class="text-muted">Subcategory: Photo Ideas</small>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 container py-4">
+                    <h3 style="color: aliceblue;">Deshmukh Photography</h3>
+                    <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                    <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" class="img-fluid">
+                </div>
+                <div class="col-md-3 container py-4">
+                    <h4>SERVIES</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#sellers" class="text-white">Wedding Shooting</a></li>
+                        <li><a href="#sellers" class="text-white">Video edeating</a></li>
+                        <li><a href="#sellers" class="text-white">Dron</a></li>
+                        <li><a href="#sellers" class="text-white">Live Shotting</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 container py-4">
+                    <h4 >FOR Custmer</h4>
+                    <ul class="list-unstyled">
+                        <div class="nav-link">
+                        <li><a href="#contact" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">Payment Method</a></li>
+                        <li><a href="#" class="text-white">Delivery</a></li>
+                        <li><a href="#" class="text-white">Return and Exchange</a></li>
+                    </ul>
+                    </div>
+        <div class="col-md-3 container py-4">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled d-flex">
+                <li class="me-3">
+                    
+                    <a href="https://www.facebook.com/profile.php?id=100083728363365" target="_blank">
+                      <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="40" width="40" />
+                  </a>
+                  
+                </li>
+                <li class="me-3">
+                  <a href="https://www.instagram.com/gajanandeshmukh5823/" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="40" width="40" /></a>
+                </li>
+                <li class="me-3">
+                  <a href="https://wa.me/9359458009" target="_blank">
+                      <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" height="40" width="50" />
+                  </a>
+
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/gajanan-deshmukh-0771a5250/" target="_blank">
+                      <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
+                  </a>
+                </li>
+            </ul>
+          <h5>For refund, please write to<br> refunds@starair.in</h5>
+        </div>
+        <div>
+        <hr class="bg-white">
+            </div>
+            <div class="text-center mt-3">
+            <a href="https://gajanand1219.github.io/portfolio/"> <p>© 2024 Design By Gajanan Deshmukh</p></a>
+
+            </div>
+        </div>
+      </footer>
+<!-- <!///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////--  -->
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Auto Scroll Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector('#carouselExampleIndicators');
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+          interval: 3000, // Transition every 3 seconds
+          ride: "carousel" // Start carousel automatically
+        });
+      });
+    </script>
+</body>
+</html>
+

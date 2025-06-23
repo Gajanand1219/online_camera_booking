@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+             background: #c2e59c;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .profile-header {
+            background: url('https://wallpapercave.com/wp/1C6G3g0.jpg') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            position: relative;
+            border-bottom: 5px solid #007bff; /* Blue bottom border for aesthetics */
+        }
+       .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 4px solid rgb(10, 230, 25);
+            position: absolute;
+            top: 450x; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f8f9fa; /* Fallback color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+        }
+        span
+        {
+            position: absolute;
+
+            top:70px;
+            left: 22%;
+            color:black;
+            font-size: xx-large;
+            z-index: -1;
+
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 50%;
+        }
+        .card {
+            border: none; /* No border for a cleaner look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+            margin-bottom: 30px; /* Spacing between cards */
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff; /* Blue text color */
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .table thead th {
+            background-color: #007bff;
+            color: white;
+        }
+        .logout-btn {
+            background-color: #dc3545; /* Red background for logout */
+            color: white;
+        }
+        .logout-btn:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+        tr{
+            background-color: white;
+            font-size: larger;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+ <!--Profile Header Sectio-->
+<div class="profile-header d-flex justify-content-center align-items-center">
+
+    <div class="profile-photo">
+        <span > No Photo Uploaded</span>
+
+        {% if user.profile_photo %}
+            <img src="{{ url_for('static', filename='uploads/' + user.profile_photo) }}" >
+        {% else %}
+        {% endif %}
+    </div>
+</div>
+<div class="container mt-5" >
+
+ <!--Upload Photo Section-->
+<h3 class="mt-4 text-center">Upload New Profile Photo</h3>
+<form action="{{ url_for('upload_photo') }}" method="post" enctype="multipart/form-data">
+    <div class="form-group text-center">
+        <input type="file" class="form-control-file" id="file" name="file" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Upload profile-photo</button>
+</form><br>
+<a href="/" class="btn logout-btn btn-block mt-4">Back</a>
+
+
+     <!--Profile Information Card-->
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">User Information</h5>
+            <p><strong><b><u>USER-ID :=</u></b>:</strong><b> {{ user.id }}</b></p>
+            <p><strong>Username:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone Number:</strong> {{ user.number }}</p>
+            <p><strong>password:</strong> {{ user.password }}</p>
+
+
+        </div>
+    </div>
+
+    </div>
+    <div class="container-fluid mt-5" >
+
+     <!--Orders Table-->
+    <h2 class="mt-5">Your Orders</h2>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Order Date</th>
+                    <th>Return Date</th>
+                    <th>Address</th>
+                    <th>Item_Name</th>
+                    <th>Total Amount</th>
+                    <th>Payment Method</th>
+                    <th>Order_status</th>
+                </tr>
+            </thead>
+            <tbody >
+                {% for order in orders %}
+                <tr>
+                    <td>{{ order[4] }}</td> <!-- Assuming order_date is the first column in the orders query -->
+                    <td>{{ order[5] }}</td> <!-- return_date -->
+                    <td>{{ order[12] }}</td> <!-- address -->
+                    <td>{{ order[9] }}</td> <!-- item_name -->
+                    <td>${{order[8] }}</td> <!-- total_amount -->
+                    <td>{{ order[10] }}</td> <!-- payment_method -->
+                    <td>{{order[13] }} </td>  <!-- order status -->
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+     <!--Logout Button-->
+    <a href="/logout" class="btn logout-btn btn-block mt-4">Logout</a>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

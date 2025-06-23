@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Deshmukh Photography | Gajanan Photography</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+       /* Set up the page with full-screen background */
+    .text {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+
+    }
+body{
+    background-size: cover;
+
+}
+    /* Background image setup */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 97%;
+      background-image: url('https://opicxo.com/wp-content/uploads/2024/12/SON00162-scaled.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      animation: zoomEffect 10s ease-in-out forwards;
+    }
+
+    /* Zoom animation for the background */
+    @keyframes zoomEffect {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2); /* Slight zoom */
+      }
+    }
+
+   
+    .img-hover-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .navbar {
+animation: slideDown 1.0s ease-out;
+width: 100%;
+}
+
+.navbar-nav .nav-link {
+position: relative;
+font-size: 18px;
+}
+
+.navbar-nav .nav-link::after {
+content: "";
+position: absolute;
+background: #295a8d;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+width: 100%;
+}
+
+@keyframes fadeInUp {
+from {
+  transform: translateY(17px);
+  opacity: 0;
+}
+to{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+    /* Text styling */
+    .text {
+      color: white;
+      font-size: 4rem;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 3s ease-in-out forwards;
+    }
+
+    /* Fade-in animation for text */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Styling for buttons */
+    .btn-custom {
+      background-color: red;
+      border-color: red;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: darkred;
+    }
+   
+        /* Custom styles for hover effect */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .card-body {
+            padding: 0;
+            width: 100%;
+
+        }
+        .card-img-top {
+            transition: transform 0.3s ease;
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+        .img-wrapper {
+            overflow: hidden;
+            position: relative;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            width: 100%; /* Full width of the parent container */
+             height: 200px;
+        }
+
+        .img-wrapper img {
+        width: 100%; /* Ensure the image covers the width of the container */
+        height: auto; /* Maintain aspect ratio */
+        position: absolute;
+        top: -20px; /* Adjust this value to center the visible portion */
+        left: 0;
+    }
+
+        .div1 {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 
+                0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17)
+                0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            width: 100%;
+
+            min-height: 630px;
+            border: 1px solid rgb(231, 216, 216);
+            padding-left: 50px;
+        }
+         /* Floating Button */
+      #chatButton {
+          position: fixed;
+          bottom: 50px;
+          right: 15px;
+          border: none;
+          border-radius: 40%;
+          cursor: pointer;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          background-color: green;
+      }
+
+    </style>
+</head>
+<body>
+ <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top d-flex justify-content-between align-items-center px-3">
+    <div class="container">
+    <h5 class="text-white mb-0">Deshmukh Photography</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item  pr-5">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item pr-5">
+                <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item ">
+                <a href="/contact"><button class="btn btn-danger" type="button" style="background-color: red; border-color: red; transition: 0.3s;">Studio</button></a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  
+<div class="text">Gallery</div>   
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+ 
+<a href="https://wa.me/9359458009" target="_blank" id="chatButton">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 60px; height: 60px;" alt="Chat">
+</a>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+ 
+<div class="d-flex justify-content-center align-items-center ">
+    <div class="text-center">
+      <a href="#Engagement" class="btn btn-primary btn-custom ">Engagement</a>
+      <a href="#Pre" class="btn btn-secondary btn-custom mx-2">Pre Wedding</a>
+      <a href="#Wedding" class="btn btn-success btn-custom mx-2">Wedding</a>
+    </div>
+  </div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="container mt-5 div1">
+    <h1 id="Engagement" class="text-center pt-5 text-primary">Engagement</h1>
+    <!-- First Row of Images -->
+    <div class="row pt-5 ">
+        <div class="col-md-4 mb-4 ">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="https://opicxo.com/wp-content/uploads/2024/12/SON00162-scaled.jpg"  class="card-img-top position-absolute start-0 w-100" style="top: -150px;" alt="Drone">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="https://opicxo.com/wp-content/uploads/2024/12/SON00210-scaled.jpg" class="card-img-top position-absolute start-0 w-100" style="top: -100px;" alt="Drone">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="https://opicxo.com/wp-content/uploads/2024/12/SON00907-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Row of Images -->
+    <div class="row pt-5">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="https://opicxo.com/wp-content/uploads/2024/12/SON00110-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="https://opicxo.com/wp-content/uploads/2024/12/AAP_6127-copy-scaled.jpg" class="card-img-top rounded shadow" style="top: -150px;" alt="Drone">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A6973-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="container mt-5 div1">
+    <h1 id="Pre" class="text-center pt-5 text-primary">Pre Wedding</h1>
+  <!-- First Row of Images -->
+  <div class="row pt-5">
+      <div class="col-md-4 mb-4 ">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/05-7-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/02-7-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/01-6-scaled.jpg" class="card-img-top rounded shadow" style="top: -130px;" alt="Drone">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Second Row of Images -->
+  <div class="row pt-5">
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/01-3-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/01-4-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/12-1-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="container mt-5 div1">
+    <h1 id="Wedding" class="text-center pt-5 text-primary">Wedding</h1>
+  <!-- First Row of Images -->
+  <div class="row pt-5">
+      <div class="col-md-4 mb-4 ">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A2914-copy-scaled.jpg" class="card-img-top rounded shadow" style="top: -150px;" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A2943-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A3993-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Second Row of Images -->
+  <div class="row pt-5">
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A5360-scaled.jpg" class="card-img-top rounded shadow" style="top: -150px;" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A6970-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <div class="img-wrapper">
+                  <img src="https://opicxo.com/wp-content/uploads/2024/12/5Y6A7259-scaled.jpg" class="card-img-top rounded shadow" alt="Drone">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 container py-4">
+                <h3 style="color: aliceblue;">Deshmukh Photography</h3>
+                <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" class="img-fluid">
+            </div>
+            <div class="col-md-3 container py-4">
+                <h4>SERVIES</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#sellers" class="text-white">Wedding Shooting</a></li>
+                    <li><a href="#sellers" class="text-white">Video edeating</a></li>
+                    <li><a href="#sellers" class="text-white">Dron</a></li>
+                    <li><a href="#sellers" class="text-white">Live Shotting</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 container py-4">
+                <h4 >FOR Custmer</h4>
+                <ul class="list-unstyled">
+                    <div class="nav-link">
+                    <li><a href="#contact" class="text-white">Contact Us</a></li>
+                    <li><a href="#" class="text-white">Payment Method</a></li>
+                    <li><a href="#" class="text-white">Delivery</a></li>
+                    <li><a href="#" class="text-white">Return and Exchange</a></li>
+                </ul>
+                </div>
+    <div class="col-md-3 container py-4">
+        <h5>Follow Us</h5>
+        <ul class="list-unstyled d-flex">
+            <li class="me-3">
+                
+                <a href="https://www.facebook.com/profile.php?id=100083728363365" target="_blank">
+                  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="40" width="40" />
+              </a>
+              
+            </li>
+            <li class="me-3 pl-3">
+              <a href="https://www.instagram.com/gajanandeshmukh5823/" target="blank"> <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="40" width="40" /></a>
+            </li>
+            <li class="me-3 pl-3">
+              <a href="https://wa.me/9359458009" target="_blank">
+                  <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" height="40" width="50" />
+              </a>
+             
+            </li>
+            <li class="me-3 pl-3">
+
+              <a href="https://www.linkedin.com/in/gajanan-deshmukh-0771a5250/" target="_blank">
+                  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
+              </a>
+              
+            </li>
+        </ul>
+      <h5>For refund, please write to<br> refunds@starair.in</h5>
+    </div>
+    <div>
+    <hr class="bg-white">
+    </div>
+    <div class="text-center mt-3">
+        <a href="https://gajanand1219.github.io/portfolio/"> <p>© 2024 Design By Gajanan Deshmukh</p></a>
+    </div>
+    </div>
+  </footer>
+  
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

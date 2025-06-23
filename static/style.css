@@ -1,0 +1,385 @@
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Hides vertical scrollbar */
+}
+a{  text-decoration: none;  }
+
+         .section {
+    animation: slideDown 1.5s ease-out;
+      }
+    @keyframes slideDown {
+from {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+to {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+.navbar {
+animation: slideDown 1.0s ease-out;
+}
+.navbar-nav .nav-link {
+position: relative;
+font-size: 18px;
+}
+
+.navbar-nav .nav-link::after {
+content: "";
+position: absolute;
+background: #295a8d;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -10px;
+transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+width: 100%;
+}
+
+@keyframes fadeInUp {
+from {
+  transform: translateY(17px);
+  opacity: 0;
+}
+to{
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+#home {
+animation: fadeInUp 1s ease-out;
+}
+.custom-btn {
+  width: 180px; /* Adjust width as needed */
+  padding: 15px 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-radius: 50px;
+}
+  .card-img-container {
+  overflow: hidden;
+}
+.card-img-top.zoom {
+  transition: transform 0.2s;
+}
+.card-img-top.zoom:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  position: relative;
+}
+
+
+@keyframes fadeInUp {
+from {
+  transform: translateY(50px);
+  opacity: 0;
+}
+to {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+@keyframes fadeOutDown {
+from {
+  transform: translateY(0);
+  opacity: 1;
+}
+to {
+  transform: translateY(50px);
+  opacity: 0;
+}
+}
+.card {
+opacity: 0;
+transform: translateY(20px);
+transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.card.show {
+animation: fadeInUp 2s ease-out forwards;
+}
+
+.card.hide {
+animation: fadeOutDown 2s ease-out forwards;
+}
+.map-responsive {
+          overflow: hidden;
+          padding-bottom: 56.25%;
+          position: relative;
+          height: 0;
+      }
+      .map-responsive iframe {
+          left: 0;
+          top: 0;
+          height: 200px;
+          width: 100%;
+          position: absolute;
+      }
+
+
+      @keyframes slideInRight {
+from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+      /* Floating Button */
+      #chatButton {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          border: none;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          animation: bounce 0.4s infinite ease-in-out, flip 15s infinite linear;
+      }
+      .img {
+          width: 40px;
+          height: 50px;
+      }
+      /* Bounce Animation */
+      @keyframes bounce {
+          0%, 100% {
+              transform: translateY(0px);
+          }
+          50% {
+              transform: translateY(-15px);
+          }
+      }
+      /* Flip Animation */
+      @keyframes flip {
+          0% {
+              transform: rotateY(0deg);
+          }
+          100% {
+              transform: rotateY(360deg);
+          }
+      }
+      
+      /* Chat Container */
+      #chatContainer {
+          width: 320px;
+          position: fixed;
+          bottom: 120px;
+          right: 25px;
+          display: none;
+          z-index: 1000;
+          /* background-color: rgb(47, 57, 235); */
+          background-image: url(https://th.bing.com/th/id/OIP.-WnDLQ2W57U6ODAtNtrvfgHaEK?rs=1&pid=ImgDetMain);
+
+      }
+      #chatBox {
+          max-height: 600px;
+          overflow-y: auto;
+      }
+      .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      background-size: cover;
+      background-position: center;
+      }
+
+  @media (max-width: 992px) {
+      .slideshow-container {
+          height: 45vh; /* Adjust height for smaller screens */
+      }
+  }
+      
+    /* User & AI Message Styling */
+    .message {
+      display: flex;
+      margin: 9px 0;
+      padding: 9px;
+      border-radius: 10px;
+      max-width: 95%;
+      font-size: 19px;
+      color: rgb(6, 0, 0);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .user-msg {
+      background-color: #c5d8eb;
+      color: rgb(6, 0, 0);
+      align-self: flex-end;
+      text-align: right;
+      font-family: 'Courier New' ;
+    }
+
+    .ai-msg {
+      background-color: #936e99;
+      color: rgb(10, 1, 1);
+      align-self: flex-start;
+      text-align: left;
+      font-family: cursive;
+    }
+
+    /* Chat Input */
+    .card-footer {
+      background: #f8f9fa;
+      padding: 10px;
+    }
+    .input-group {
+      display: flex;
+    }
+    #userInput {
+      flex-grow: 1;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+  .offer{
+          display: inline-block;
+          width: 70px;
+          height: 30px;
+          background-color: red;
+          text-align: center;
+          color: white;
+          cursor: pointer;
+
+      }
+
+
+  .close-link {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+  }
+
+  /* Animation on the close icon */
+  .close-link .close {
+      display: inline-block;
+      animation: upDown 1.5s ease-in-out infinite; /* Smooth up-down animation */
+      transition: color 0.3s ease; /* Smooth color transition */
+      color: wheat;
+
+
+  }
+
+  /* Animation keyframes */
+  @keyframes upDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); } /* Adjust the movement height */
+  }
+
+  /* Optional: Hover effect */
+  .close-link:hover .close {
+      color: yellow;
+  }
+
+
+.card-img-top {
+border-radius: 8px;
+}
+
+.card-container {
+position: absolute;
+z-index: 2;
+display: none;
+}
+
+.map-responsive {
+      overflow: hidden;
+      padding-bottom: 66.25%; /* 16:9 aspect ratio */
+      position: relative;
+      height: 0;
+      max-width: 100%;
+  }
+  .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+  }
+
+  /* Ensure both the form and map take equal vertical space */
+  .col-md-6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  /* Control height for the form and map */
+  form {
+      height: 100%;
+      min-height: 500px;
+  }
+  .map-responsive iframe {
+      height: 400px;
+  }
+
+
+  .checked {
+    color: orange;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Make the dropdown align on hover */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 767px) {
+  .second-card {
+      display: none; /* Hide second card on mobile */
+  }
+}
+      /* Scrollable container */
+      .scroll-container {
+          background-color: #f8f9fa;
+          overflow-x: auto;
+          overflow-y: hidden; /* Hides vertical scrollbar */
+          white-space: nowrap;
+          padding: 10px;
+          display: flex;
+          scroll-behavior: smooth;
+          scrollbar-width: thin; /* Makes scrollbar smaller */
+          scrollbar-color: #888 #ddd; /* Thumb and track color */
+          -ms-overflow-style: none;
+
+      }
+
+      /* Small Cards */
+      .scroll-container .card {
+          flex: 0 0 auto;
+          width: 300px; /* Small card width */
+          margin: 10px;
+          text-align: center;
+          position: relative; /* Needed for overflow to work correctly */
+          overflow: hidden;
+      }
+      .scroll-container img {
+        scrollbar-width: none;
+        transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+      }
+      .scroll-container img:hover {
+        transform: scale(1.1); /* Scale up the image to 110% */
+      }
+
+      .card-img img{ height: 
+        200px;}
+
+
+
